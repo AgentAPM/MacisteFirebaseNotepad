@@ -1,6 +1,7 @@
 package com.example.firebasenotepad.view
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,15 +14,17 @@ import com.example.firebasenotepad.databinding.LoginFragmentBinding
 import com.example.firebasenotepad.viewmodel.LoginViewModel
 
 class LoginFragment: Fragment() {
+    lateinit var viewModel:LoginViewModel
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        Log.d("dbg","onCreateLogin")
         val binding = LoginFragmentBinding.inflate(inflater)
         binding.lifecycleOwner = this
 
-        val viewModel = ViewModelProvider(this)[LoginViewModel::class.java]
+        viewModel = ViewModelProvider(this)[LoginViewModel::class.java]
         binding.viewModel = viewModel
 
         viewModel.ld_toastToShow.observe(viewLifecycleOwner) {
@@ -36,6 +39,8 @@ class LoginFragment: Fragment() {
                 viewModel.resetNavigateToGallery()
             }
         }
+        viewModel.onLogOut()
+
         return binding.root
     }
 }

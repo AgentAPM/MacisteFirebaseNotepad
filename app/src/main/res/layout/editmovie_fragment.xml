@@ -78,6 +78,28 @@
                 android:textColor="@color/moviecolor"
                 android:backgroundTint="@color/moviecolor"
                 tools:text="Netflix"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edit_movie_completed_label"
+                    android:textColor="@color/moviecolor" />
+
+                <CheckBox
+                    android:id="@+id/cb_completed"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:backgroundTint="@color/gamecolor"
+                    android:buttonTint="@color/moviecolor"
+                    android:checked="@={viewModel.data.completed}">
+
+                </CheckBox>
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"

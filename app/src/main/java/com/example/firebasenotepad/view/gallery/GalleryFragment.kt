@@ -12,38 +12,37 @@ import androidx.navigation.fragment.findNavController
 import androidx.viewpager.widget.ViewPager
 import com.example.firebasenotepad.R
 import com.example.firebasenotepad.databinding.GalleryFragmentBinding
-import com.example.firebasenotepad.view.gallery.tabs.BooksTab
-import com.example.firebasenotepad.view.gallery.tabs.GamesTab
-import com.example.firebasenotepad.view.gallery.tabs.MoviesTab
-import com.example.firebasenotepad.view.gallery.tabs.OldTabsAdapter
-import com.example.firebasenotepad.viewmodel.gallery.BookGalleryController
-import com.example.firebasenotepad.viewmodel.gallery.GalleryViewModel
-import com.example.firebasenotepad.viewmodel.gallery.GameGalleryController
-import com.example.firebasenotepad.viewmodel.gallery.MovieGalleryController
+import com.example.firebasenotepad.view.gallery.tabs.*
+import com.example.firebasenotepad.viewmodel.gallery.*
 
 class GalleryFragment:Fragment() {
     private val gameController=GameGalleryController()
     private val bookController=BookGalleryController()
     private val movieController=MovieGalleryController()
+    private val songController=SongGalleryController()
     private val tabs=listOf(
         GamesTab(),
         BooksTab(),
-        MoviesTab()
+        MoviesTab(),
+        SongsTab()
     )
     private val tabNames=listOf(
         R.string.tab_games,
         R.string.tab_books,
-        R.string.tab_movies
+        R.string.tab_movies,
+        R.string.tab_songs
     )
     private val controllers=listOf(
         gameController,
         bookController,
-        movieController
+        movieController,
+        songController
     )
     private val colors = listOf(
         R.color.gamecolor,
         R.color.bookcolor,
-        R.color.moviecolor
+        R.color.moviecolor,
+        R.color.songcolor
     )
     private lateinit var tabsAdapter:OldTabsAdapter
     private lateinit var viewPager: ViewPager

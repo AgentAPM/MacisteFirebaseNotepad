@@ -11,5 +11,8 @@ object AuthenticationModel {
         val task = Firebase.auth.signInWithEmailAndPassword(login,password)
         return task
     }
+    fun LogOut(){
+        Firebase.auth.signOut()
+    }
     val userUUID:String? get()=Firebase.auth.uid
 }

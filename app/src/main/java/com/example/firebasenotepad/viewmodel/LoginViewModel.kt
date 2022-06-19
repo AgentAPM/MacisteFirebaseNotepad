@@ -4,7 +4,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.firebasenotepad.model.AuthenticationModel
+import com.example.firebasenotepad.model.*
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
@@ -43,5 +43,13 @@ class LoginViewModel:ViewModel() {
         }
         _showRepeatPassword.value=true
 
+    }
+    fun onLogOut(){
+        AuthenticationModel.LogOut()
+        
+        BooksRepository.invalidateCache()
+        GamesRepository.invalidateCache()
+        MoviesRepository.invalidateCache()
+        SongsRepository.invalidateCache()
     }
 }

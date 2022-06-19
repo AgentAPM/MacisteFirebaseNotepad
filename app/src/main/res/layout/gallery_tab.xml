@@ -2,12 +2,12 @@
 <layout xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <data>
+    <!--data>
         <variable
             name="controller"
             type="com.example.firebasenotepad.viewmodel.gallery.GalleryController" />
         <import type="android.view.View"/>
-    </data>
+    </data-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">

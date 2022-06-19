@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_Gallery_to_editMovie"
             app:destination="@id/editMovieFragment" />
+        <action
+            android:id="@+id/action_Gallery_to_editSong"
+            app:destination="@id/editSongFragment" />
     </fragment>
     <fragment
         android:id="@+id/editGameFragment"
@@ -68,6 +71,18 @@
             app:popUpTo="@id/gameGalleryFragment"
             app:popUpToInclusive="true" />
         <argument android:name="movieIndex"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/editSongFragment"
+        android:name="com.example.firebasenotepad.view.edit.EditSongFragment"
+        android:label="EditSongFragment"
+        tools:layout="@layout/editsong_fragment">
+        <action
+            android:id="@+id/return_editSong_to_Gallery"
+            app:destination="@id/gameGalleryFragment" />
+        <argument
+            android:name="songIndex"
             app:argType="integer" />
     </fragment>
 </navigation>

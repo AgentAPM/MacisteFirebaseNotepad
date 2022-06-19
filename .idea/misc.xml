@@ -27,6 +27,20 @@
         <entry key="..\:/Users/Agent/AndroidStudioProjects/FirebaseNotepad/app/src/main/res/layout/tabs_fragment.xml" value="0.176" />
         <entry key="..\:/Users/Agent/AndroidStudioProjects/GameNotepad/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/Agent/AndroidStudioProjects/GameNotepad/app/src/main/res/layout/login_fragment.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Agent/AndroidStudioProjects/MacisteFirebaseNotepad/app/src/main/res/drawable/icon_book.xml" value="0.163" />
+        <entry key="..\:/Users/Agent/AndroidStudioProjects/MacisteFirebaseNotepad/app/src/main/res/drawable/icon_song.xml" value="0.163" />
+        <entry key="..\:/Users/Agent/AndroidStudioProjects/MacisteFirebaseNotepad/app/src/main/res/layout/book_gallery_list.xml" value="0.15364583333333334" />
+        <entry key="..\:/Users/Agent/AndroidStudioProjects/MacisteFirebaseNotepad/app/src/main/res/layout/book_listitem.xml" value="0.4" />
+        <entry key="..\:/Users/Agent/AndroidStudioProjects/MacisteFirebaseNotepad/app/src/main/res/layout/editbook_fragment.xml" value="0.264" />
+        <entry key="..\:/Users/Agent/AndroidStudioProjects/MacisteFirebaseNotepad/app/src/main/res/layout/editgame_fragment.xml" value="0.3841145833333333" />
+        <entry key="..\:/Users/Agent/AndroidStudioProjects/MacisteFirebaseNotepad/app/src/main/res/layout/editmovie_fragment.xml" value="0.15364583333333334" />
+        <entry key="..\:/Users/Agent/AndroidStudioProjects/MacisteFirebaseNotepad/app/src/main/res/layout/editsong_fragment.xml" value="0.264" />
+        <entry key="..\:/Users/Agent/AndroidStudioProjects/MacisteFirebaseNotepad/app/src/main/res/layout/gallery_tab.xml" value="0.2" />
+        <entry key="..\:/Users/Agent/AndroidStudioProjects/MacisteFirebaseNotepad/app/src/main/res/layout/game_gallery_list.xml" value="0.15364583333333334" />
+        <entry key="..\:/Users/Agent/AndroidStudioProjects/MacisteFirebaseNotepad/app/src/main/res/layout/movie_gallery_list.xml" value="0.15364583333333334" />
+        <entry key="..\:/Users/Agent/AndroidStudioProjects/MacisteFirebaseNotepad/app/src/main/res/layout/music_gallery_list.xml" value="0.15364583333333334" />
+        <entry key="..\:/Users/Agent/AndroidStudioProjects/MacisteFirebaseNotepad/app/src/main/res/layout/song_gallery_list.xml" value="0.15364583333333334" />
+        <entry key="..\:/Users/Agent/AndroidStudioProjects/MacisteFirebaseNotepad/app/src/main/res/layout/song_listitem.xml" value="0.536" />
       </map>
     </option>
   </component>
