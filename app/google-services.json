@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "427171058475",
+    "firebase_url": "https://mobintmaciste-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "mobintmaciste",
+    "storage_bucket": "mobintmaciste.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:427171058475:android:15e5ae42cd6aed41d56b6e",
+        "android_client_info": {
+          "package_name": "com.example.firebasenotepad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "427171058475-nvci29qbhq48bu3t85ngg02v0p4b8599.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrgcuQZaWnljDhkEAGlclNtgL6FSL4nAA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "427171058475-nvci29qbhq48bu3t85ngg02v0p4b8599.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:427171058475:android:aa38ba177096d2fad56b6e",
+        "android_client_info": {
+          "package_name": "com.example.gamenotepad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "427171058475-nvci29qbhq48bu3t85ngg02v0p4b8599.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrgcuQZaWnljDhkEAGlclNtgL6FSL4nAA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "427171058475-nvci29qbhq48bu3t85ngg02v0p4b8599.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

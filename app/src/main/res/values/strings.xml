@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Firebase Notepad</string>
+
+    <string name="login_email_label">E-Mail:</string>
+    <string name="login_password_label">Hasło:</string>
+    <string name="login_login_label">Zaloguj</string>
+    <string name="login_register_label">Zarejestruj</string>
+    <string name="login_repeatpassword_label">Powtórz hasło:</string>
+
+    <string name="edit_save_label">Zapisz</string>
+    <string name="edit_delete_label">Usuń</string>
+
+    <string name="edit_game_name_label">Nazwa gry</string>
+    <string name="edit_game_name_hint">Nazwa</string>
+    <string name="edit_game_author_label">Twórcy gry</string>
+    <string name="edit_game_author_hint">Twórca</string>
+    <string name="edit_game_shop_label">Sklep</string>
+    <string name="edit_game_shop_hint">Sklep</string>
+
+    <string name="edit_movie_name_label">Tytuł filmu</string>
+    <string name="edit_movie_name_hint">Tytuł</string>
+    <string name="edit_movie_author_label">Reżyser</string>
+    <string name="edit_movie_author_hint">Studio</string>
+    <string name="edit_movie_shop_label">Sklep</string>
+    <string name="edit_movie_shop_hint">Sklep</string>
+
+    <string name="edit_book_name_label">Tytuł książki</string>
+    <string name="edit_book_name_hint">Tytuł</string>
+    <string name="edit_book_author_label">Autor książki</string>
+    <string name="edit_book_author_hint">Autor</string>
+    <string name="edit_book_shop_label">Sklep</string>
+    <string name="edit_book_shop_hint">Sklep</string>
+
+    <string name="tab_games">Gry</string>
+    <string name="tab_books">Książki</string>
+    <string name="tab_movies">Filmy</string>
+</resources>

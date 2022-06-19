@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.firebasenotepad.viewmodel.LoginViewModel" />
+        <import type="android.view.View"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:minWidth="300dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_email_label"
+                android:textColor="@color/gamecolor" />
+
+            <EditText
+                android:id="@+id/et_login_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/login_login_label"
+                android:text="@={viewModel.loginInput}"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                android:textColor="@color/gamecolor"
+                android:backgroundTint="@color/gamecolor"
+                tools:text="Student@polsl.pl"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hasło:"
+                android:textColor="@color/gamecolor" />
+
+            <EditText
+                android:id="@+id/et_login_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/login_password_label"
+                android:text="@={viewModel.passwordInput}"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:textColor="@color/gamecolor"
+                android:backgroundTint="@color/gamecolor"
+                tools:text="Zaq12wsx"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_repeatpassword_label"
+                android:textColor="@color/gamecolor"
+                android:visibility="@{viewModel.showRepeatPassword ? View.VISIBLE : View.GONE}" />
+
+            <EditText
+                android:id="@+id/et_login_repeatpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/login_password_label"
+                android:text="@={viewModel.passwordRepeatInput}"
+                android:visibility="@{viewModel.showRepeatPassword ? View.VISIBLE : View.GONE}"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:textColor="@color/gamecolor"
+                android:backgroundTint="@color/gamecolor"
+                tools:text="Zaq12wsx"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_login_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:backgroundTint="@color/gamecolor"
+                    android:onClick="@{()->viewModel.onClickLogin()}"
+                    android:text="@string/login_login_label"
+                    android:textColor="@color/textcolor" />
+
+                <Button
+                    android:id="@+id/btn_login_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:backgroundTint="@color/bgcolor"
+                    android:onClick="@{()->viewModel.onClickRegister()}"
+                    android:text="@string/login_register_label"
+                    android:textColor="@color/gamecolor"
+                    android:visibility="gone"
+                    app:strokeColor="@color/gamecolor"
+                    app:strokeWidth="1dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

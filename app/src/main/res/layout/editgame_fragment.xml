@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.firebasenotepad.viewmodel.edit.EditGameViewModel" />
+        <import type="android.view.View"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:minWidth="250dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_game_name_label"
+                android:textColor="@color/gamecolor" />
+
+            <EditText
+                android:id="@+id/et_edit_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:text="@={viewModel.data.name}"
+                android:hint="@string/edit_game_name_hint"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                android:textColor="@color/gamecolor"
+                android:backgroundTint="@color/gamecolor"
+                tools:text="Cool game"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_game_author_label"
+                android:textColor="@color/gamecolor" />
+
+            <AutoCompleteTextView
+                android:id="@+id/et_edit_author"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:text="@={viewModel.data.author}"
+                android:hint="@string/edit_game_author_hint"
+                android:minHeight="48dp"
+                android:textColor="@color/gamecolor"
+                android:backgroundTint="@color/gamecolor"
+                tools:text="Cool game Studio"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_game_shop_label"
+                android:textColor="@color/gamecolor"
+                />
+            <AutoCompleteTextView
+                android:id="@+id/et_edit_shop"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:text="@={viewModel.data.store}"
+                android:hint="@string/edit_game_shop_hint"
+                android:minHeight="48dp"
+                android:textColor="@color/gamecolor"
+                android:backgroundTint="@color/gamecolor"
+                tools:text="Netflix"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_edit_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:backgroundTint="@color/gamecolor"
+                    android:gravity="center_horizontal"
+                    android:onClick="@{()->viewModel.onClickSave()}"
+                    android:text="@string/edit_save_label"
+                    android:textColor="@color/textcolor" />
+
+                <Button
+                    android:id="@+id/btn_edit_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:backgroundTint="@color/gamecolor"
+                    android:gravity="center_horizontal"
+                    android:onClick="@{()->viewModel.onClickSave()}"
+                    android:text="@string/edit_delete_label"
+                    android:textColor="@color/textcolor" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

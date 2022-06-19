@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="data"
+            type="com.example.firebasenotepad.model.entities.Book" />
+        <variable
+            name="clickListener"
+            type="com.example.firebasenotepad.viewmodel.ClickListener" />
+        <variable
+            name="checkboxListener"
+            type="com.example.firebasenotepad.viewmodel.CheckboxListener" />
+        <variable
+            name="listIndex"
+            type="Integer" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="@{()->clickListener.onClick(listIndex)}">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cv_wrapper"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:background="@drawable/shape_filled_rounded"
+                android:backgroundTint="@color/maincolor"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/tv_bookname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/panel_corner_radius"
+                    android:layout_marginStart="@dimen/panel_corner_radius"
+                    android:layout_marginEnd="@dimen/panel_corner_radius"
+                    android:fontFamily="@font/nunito_sans"
+                    android:text="@{data.name}"
+                    android:textColor="@color/white"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/tv_bookauthor"
+                    tools:text="Name of the book" />
+
+                <TextView
+                    android:id="@+id/tv_bookauthor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintHorizontal_bias="0.25"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="@dimen/panel_corner_radius"
+                    android:fontFamily="@font/nunito_sans"
+                    android:text="@{data.author}"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="@id/tv_bookname"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_bookname"
+                    app:layout_constraintBottom_toTopOf="@id/tv_bookshop"
+                    tools:text="Cool Book Studio" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="4dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tv_bookshop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:background="@color/bookcolor"/>
+
+                <TextView
+                    android:id="@+id/tv_bookshop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/shape_rounded_corner3"
+                    android:backgroundTint="@color/bookcolor"
+                    android:fontFamily="@font/nunito_sans"
+                    android:paddingStart="8dp"
+                    android:text="@{data.store}"
+                    android:textColor="@color/coloronbook"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_bookauthor"
+                    tools:text="Shop name" />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="1"
+                    android:src="@drawable/triangle_corner1"
+                    app:layout_constraintStart_toEndOf="@id/tv_bookshop"
+                    app:layout_constraintTop_toTopOf="@id/tv_bookshop"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_bookshop"
+                    app:tint="@color/bookcolor" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <CheckBox
+                android:id="@+id/cb_completed"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/shape_circle"
+                android:backgroundTint="@color/bookcolor"
+                android:buttonTint="@color/coloronbook"
+                android:checked="@={data.completed}"
+                app:layout_constraintBottom_toBottomOf="@id/cv_wrapper"
+                android:layout_marginBottom="-12dp"
+                app:layout_constraintRight_toRightOf="@id/cv_wrapper"
+                android:layout_marginRight="-12dp"
+                android:onCheckedChanged="@{(view,state)->checkboxListener.onChange(listIndex,state)}">
+
+            </CheckBox>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</layout>
