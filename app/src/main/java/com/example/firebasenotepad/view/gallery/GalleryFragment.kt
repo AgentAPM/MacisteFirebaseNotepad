@@ -83,6 +83,15 @@ class GalleryFragment:Fragment() {
                 }
             }
         }
+        songController.apply {
+            navigateToEdit.observe(viewLifecycleOwner){
+                if(it!=-1){
+                    Log.d("dbg","navigating to song edit(${it})")
+                    findNavController().navigate(GalleryFragmentDirections.actionGalleryToEditSong(it))
+                    resetNavigateToEdit()
+                }
+            }
+        }
 
 
         val factory = GalleryViewModel.Factory(controllers)
@@ -101,11 +110,12 @@ class GalleryFragment:Fragment() {
 
         //viewPager.addOnPageChangeListener(TabChangeListener({pageID->viewModel.onTabChanged(pageID)}))
 
+        val fab_add = binding.fabAddEntry
+
         fun updateViewColor(colorID:Int){
             val newColor = requireContext().resources.getColor(colorID)
-            viewTabs.setSelectedTabIndicatorColor(
-                newColor
-            )
+            viewTabs.setSelectedTabIndicatorColor(newColor)
+            fab_add.setBackgroundColor(newColor)
         }
 
         viewModel.onTabChanged(0)

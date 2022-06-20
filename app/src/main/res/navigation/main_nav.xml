@@ -80,7 +80,9 @@
         tools:layout="@layout/editsong_fragment">
         <action
             android:id="@+id/return_editSong_to_Gallery"
-            app:destination="@id/gameGalleryFragment" />
+            app:destination="@id/gameGalleryFragment"
+            app:popUpTo="@id/gameGalleryFragment"
+            app:popUpToInclusive="true" />
         <argument
             android:name="songIndex"
             app:argType="integer" />

@@ -38,7 +38,7 @@
                 android:hint="@string/edit_book_name_hint"
                 android:inputType="textEmailAddress"
                 android:minHeight="48dp"
-                android:textColor="@color/bookcolor"
+                android:textColor="@color/maincolordark"
                 android:backgroundTint="@color/bookcolor"
                 tools:text="Cool book"/>
 
@@ -57,7 +57,7 @@
                 android:text="@={viewModel.data.author}"
                 android:hint="@string/edit_book_author_hint"
                 android:minHeight="48dp"
-                android:textColor="@color/bookcolor"
+                android:textColor="@color/maincolordark"
                 android:backgroundTint="@color/bookcolor"
                 tools:text="Cool book Studio"/>
             <TextView
@@ -75,7 +75,7 @@
                 android:text="@={viewModel.data.store}"
                 android:hint="@string/edit_book_shop_hint"
                 android:minHeight="48dp"
-                android:textColor="@color/bookcolor"
+                android:textColor="@color/maincolordark"
                 android:backgroundTint="@color/bookcolor"
                 tools:text="Netflix"/>
 
@@ -118,7 +118,7 @@
                     android:gravity="center_horizontal"
                     android:onClick="@{()->viewModel.onClickSave()}"
                     android:text="@string/edit_save_label"
-                    android:textColor="@color/textcolor" />
+                    android:textColor="@color/coloronbook" />
 
                 <Button
                     android:id="@+id/btn_edit_delete"
@@ -130,7 +130,7 @@
                     android:gravity="center_horizontal"
                     android:onClick="@{()->viewModel.onClickSave()}"
                     android:text="@string/edit_delete_label"
-                    android:textColor="@color/textcolor" />
+                    android:textColor="@color/coloronbook" />
 
             </LinearLayout>
         </LinearLayout>

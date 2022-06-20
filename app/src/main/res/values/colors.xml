@@ -16,7 +16,7 @@
 
     <color name="gamecolor">#FFFF8F00</color>
     <color name="gamecolordark">#FFFF6F00</color>
-    <color name="colorongame">@color/maincolor</color>
+    <color name="colorongame">@color/white</color>
 
     <color name="bookcolor">#259b24</color>
     <color name="bookcolordark">#0a7e07</color>

@@ -9,8 +9,8 @@ abstract class GalleryController {
               val navigateToEdit:LiveData<Int> get()=_navigateToEdit
               fun resetNavigateToEdit(){ _navigateToEdit.value = -1 }
 
-    open fun onAdd() {_navigateToEdit.value = -2; Log.d("dbg","OnAdd")}
-    open fun onClickItem(index:Int) {_navigateToEdit.value = index; Log.d("dbg","OnClick $index")}
+    open fun onAdd() { Log.d("dbg","OnAdd"); _navigateToEdit.value = -2; }
+    open fun onClickItem(index:Int) { Log.d("dbg","OnClick $index"); _navigateToEdit.value = index; }
     abstract fun onCheckItem(index:Int,state:Boolean)
     abstract fun loadItems()
     abstract fun saveItems()

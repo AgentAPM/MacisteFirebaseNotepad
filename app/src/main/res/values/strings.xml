@@ -34,7 +34,7 @@
     <string name="edit_book_shop_hint">Sklep</string>
     <string name="edit_book_completed_label">Przeczytano</string>
 
-    <string name="edit_song_name_label">Tytuł piosenkii</string>
+    <string name="edit_song_name_label">Tytuł piosenki</string>
     <string name="edit_song_name_hint">Tytuł</string>
     <string name="edit_song_author_label">Autor książki</string>
     <string name="edit_song_author_hint">Piosenkarz</string>

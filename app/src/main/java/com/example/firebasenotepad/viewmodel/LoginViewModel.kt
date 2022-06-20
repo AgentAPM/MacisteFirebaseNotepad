@@ -46,7 +46,7 @@ class LoginViewModel:ViewModel() {
     }
     fun onLogOut(){
         AuthenticationModel.LogOut()
-        
+
         BooksRepository.invalidateCache()
         GamesRepository.invalidateCache()
         MoviesRepository.invalidateCache()
